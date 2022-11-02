@@ -71,6 +71,9 @@ void SceneForest::KeyCheck(const _float& dt)
 				m_pUIManager->GetUIOpened(UIManager::UI_SYSTEM_MENU_WINDOW))
 				goto NextCheck;
 
+			if (m_pUIManager->GetCursorIsOnTheUI())
+				goto NextCheck;
+
 			if (nullptr != m_pBackgroundLayer)
 			{
 				vec3 vCameraPos = m_pDefaultCamera->GetCameraEye();
